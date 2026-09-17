@@ -1,0 +1,278 @@
+// ========== 列表样式 ==========
+.list {
+  display: flex;
+  padding: 24rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 12rpx rgba(26,10,10,0.04);
+  transition: all 0.2s;
+
+  &:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+.lPoster {
+  width: 180rpx;
+  height: 240rpx;
+  border-radius: 12rpx;
+  background: linear-gradient(135deg, #1A0A0A, #4A2020);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 24rpx;
+}
+
+.lInitial {
+  color: #C9A96E;
+  font-size: 60rpx;
+  font-weight: bold;
+  font-family: 'STSong', serif;
+}
+
+.lInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.lHeader {
+  margin-bottom: 8rpx;
+}
+
+.lTitle {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1A0A0A;
+  display: block;
+}
+
+.lSubtitle {
+  font-size: 24rpx;
+  color: #8C7C7C;
+  margin-top: 4rpx;
+  display: block;
+}
+
+.lMeta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8rpx;
+}
+
+.lCat {
+  font-size: 22rpx;
+  font-weight: 500;
+}
+
+.lDuration, .lLang {
+  font-size: 22rpx;
+  color: #8C7C7C;
+}
+
+.lFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8rpx;
+}
+
+.lRating {
+  display: flex;
+  align-items: center;
+}
+
+.lStars {
+  font-size: 26rpx;
+  color: #C9A96E;
+}
+
+.lCount {
+  font-size: 22rpx;
+  color: #B8A8A8;
+  margin-left: 4rpx;
+}
+
+.lPrice {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #8B1A2B;
+}
+
+.lPriceSep {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #ccc;
+}
+
+.lPriceLabel {
+  font-size: 22rpx;
+  font-weight: 500;
+}
+
+.lTags {
+  display: flex;
+  gap: 8rpx;
+  flex-wrap: wrap;
+}
+
+.lTag {
+  font-size: 20rpx;
+  color: #8C7C7C;
+  background: #F5F0EB;
+  padding: 4rpx 12rpx;
+  border-radius: 6rpx;
+}
+
+// ========== 网格样式 ==========
+.grid {
+  background: #fff;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 12rpx rgba(26,10,10,0.04);
+  transition: all 0.2s;
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+.gPoster {
+  width: 100%;
+  height: 280rpx;
+  background: linear-gradient(135deg, #1A0A0A, #4A2020);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.gInitial {
+  color: #C9A96E;
+  font-size: 72rpx;
+  font-weight: bold;
+  font-family: 'STSong', serif;
+}
+
+.gBadge, .gBadgeHot {
+  position: absolute;
+  top: 12rpx;
+  right: 12rpx;
+  font-size: 20rpx;
+  color: #fff;
+  padding: 4rpx 12rpx;
+  border-radius: 8rpx;
+}
+
+.gBadge {
+  background: #8B1A2B;
+}
+
+.gBadgeHot {
+  background: #C9A96E;
+}
+
+.gInfo {
+  padding: 16rpx;
+}
+
+.gTitle {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1A0A0A;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 6rpx;
+}
+
+.gTags {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6rpx;
+}
+
+.gCat {
+  font-size: 22rpx;
+  font-weight: 500;
+}
+
+.gRating {
+  font-size: 22rpx;
+  color: #C9A96E;
+}
+
+.gPrice {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #8B1A2B;
+}
+
+// ========== 横向滚动样式 ==========
+.horizontal {
+  display: flex;
+  flex-direction: column;
+  width: 240rpx;
+  flex-shrink: 0;
+  margin-right: 20rpx;
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.hPoster {
+  width: 240rpx;
+  height: 320rpx;
+  border-radius: 12rpx;
+  background: linear-gradient(135deg, #1A0A0A, #4A2020);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12rpx;
+}
+
+.hInitial {
+  color: #C9A96E;
+  font-size: 80rpx;
+  font-weight: bold;
+  font-family: 'STSong', serif;
+}
+
+.hInfo {
+  padding: 0 4rpx;
+}
+
+.hTitle {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1A0A0A;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hSubtitle {
+  font-size: 22rpx;
+  color: #8C7C7C;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 4rpx;
+}
+
+.hDate {
+  font-size: 24rpx;
+  color: #8B1A2B;
+  font-weight: 500;
+  margin-top: 6rpx;
+}

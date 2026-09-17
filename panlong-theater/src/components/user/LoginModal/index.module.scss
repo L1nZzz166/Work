@@ -1,0 +1,124 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  width: 100%;
+  background: #fff;
+  border-radius: 40rpx 40rpx 0 0;
+  padding: 48rpx 40rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+
+.logo {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: #8B1A2B;
+  color: #fff;
+  font-size: 52rpx;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16rpx;
+}
+
+.brand {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #1A0A0A;
+  font-family: 'STSong', serif;
+  letter-spacing: 4rpx;
+}
+
+.slogan {
+  font-size: 26rpx;
+  color: #8C7C7C;
+  margin-bottom: 32rpx;
+}
+
+.benefits {
+  display: flex;
+  gap: 24rpx;
+  margin-bottom: 40rpx;
+}
+
+.benefit {
+  font-size: 22rpx;
+  color: #8C7C7C;
+}
+
+.loginBtn {
+  width: 100%;
+  height: 96rpx;
+  background: #07C160;
+  border-radius: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20rpx;
+
+  &:active {
+    opacity: 0.85;
+  }
+}
+
+.loginBtnContent {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+}
+
+.wechatIcon {
+  font-size: 36rpx;
+}
+
+.loginBtnText {
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.agreement {
+  font-size: 20rpx;
+  color: #B8A8A8;
+  margin-bottom: 32rpx;
+}
+
+.closeBtn {
+  padding: 16rpx 0;
+}
+
+.closeText {
+  font-size: 28rpx;
+  color: #8C7C7C;
+}

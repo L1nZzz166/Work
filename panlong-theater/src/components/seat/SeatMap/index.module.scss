@@ -1,0 +1,136 @@
+.map {
+  width: 100%;
+  height: 600rpx;
+  background: #fff;
+  overflow: auto;
+}
+
+.stage {
+  position: relative;
+  padding: 16rpx 24rpx 40rpx 60rpx;
+  min-width: 900rpx;
+}
+
+.zoneLabel {
+  position: absolute;
+  left: 8rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4rpx 8rpx;
+  background: #F5F0EB;
+  border-radius: 4rpx;
+}
+
+.zoneName {
+  font-size: 20rpx;
+  font-weight: 600;
+  color: #1A0A0A;
+}
+
+.zonePrice {
+  font-size: 18rpx;
+  color: #8B1A2B;
+  font-weight: 500;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6rpx;
+}
+
+.rowLabel {
+  width: 52rpx;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rowLabelText {
+  font-size: 20rpx;
+  color: #8C7C7C;
+}
+
+.seatsRow {
+  display: flex;
+  align-items: center;
+  gap: 4rpx;
+}
+
+.seat {
+  width: 44rpx;
+  height: 38rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6rpx 6rpx 3rpx 3rpx;
+  border: 2rpx solid;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.seatNum {
+  font-size: 16rpx;
+  font-weight: 500;
+}
+
+// 状态样式
+.available {
+  background: #E8F5E9;
+  border-color: #66BB6A;
+
+  .seatNum {
+    color: #388E3C;
+  }
+
+  &:active {
+    transform: scale(1.15);
+  }
+}
+
+.sold {
+  background: #EEEEEE;
+  border-color: #E0E0E0;
+
+  .seatNum {
+    color: #CCCCCC;
+  }
+}
+
+.selected {
+  background: #8B1A2B;
+  border-color: #6B1320;
+  box-shadow: 0 0 12rpx rgba(139, 26, 43, 0.4);
+  transform: scale(1.06);
+
+  .seatNum {
+    color: #FFFFFF;
+    font-weight: 700;
+  }
+}
+
+.locked {
+  background: #FFF3E0;
+  border-color: #FFB74D;
+
+  .seatNum {
+    color: #E65100;
+  }
+}
+
+.aisle, .disabled {
+  pointer-events: none;
+}
+
+.aisleSpace {
+  width: 44rpx;
+  height: 38rpx;
+  flex-shrink: 0;
+}

@@ -1,0 +1,94 @@
+.bar {
+  background: #fff;
+  border-top: 1rpx solid #E8E0D5;
+  padding: 16rpx 24rpx;
+  padding-bottom: calc(16rpx + constant(safe-area-inset-bottom));
+  padding-bottom: calc(16rpx + env(safe-area-inset-bottom));
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24rpx 0;
+}
+
+.emptyText {
+  color: #B8A8A8;
+  font-size: 26rpx;
+}
+
+.seatsRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.seatsScroll {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.seatTag {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: #F5F0EB;
+  padding: 8rpx 16rpx;
+  border-radius: 8rpx;
+  margin-right: 12rpx;
+  min-width: 100rpx;
+}
+
+.seatNum {
+  font-size: 24rpx;
+  font-weight: 600;
+  color: #1A0A0A;
+}
+
+.seatPrice {
+  font-size: 20rpx;
+  color: #8B1A2B;
+  margin-top: 2rpx;
+}
+
+.clearBtn {
+  flex-shrink: 0;
+  padding: 12rpx 16rpx;
+  margin-left: 12rpx;
+}
+
+.clearText {
+  font-size: 24rpx;
+  color: #8C7C7C;
+}
+
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total {
+  font-size: 26rpx;
+  color: #8C7C7C;
+}
+
+.totalPrice {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #8B1A2B;
+}
+
+.confirmBtn {
+  background: linear-gradient(135deg, #8B1A2B, #6B1320);
+  padding: 18rpx 48rpx;
+  border-radius: 40rpx;
+}
+
+.confirmText {
+  color: #fff;
+  font-size: 28rpx;
+  font-weight: 600;
+}

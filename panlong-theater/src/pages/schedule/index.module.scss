@@ -1,0 +1,61 @@
+.page {
+  min-height: 100vh;
+  background: #F5F0EB;
+}
+
+.searchRow {
+  padding: 16rpx 24rpx;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  padding: 18rpx 24rpx;
+  background: #fff;
+  border-radius: 48rpx;
+  box-shadow: 0 2rpx 8rpx rgba(26,10,10,0.03);
+}
+
+.searchActive {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.searchInput {
+  flex: 1;
+  height: 76rpx;
+  background: #F5F0EB;
+  border-radius: 38rpx;
+  padding: 0 28rpx;
+  font-size: 28rpx;
+}
+
+.cancelBtn {
+  font-size: 28rpx;
+  color: #8C7C7C;
+  flex-shrink: 0;
+}
+
+.searchIcon {
+  font-size: 28rpx;
+  margin-right: 12rpx;
+}
+
+.searchPlaceholder {
+  color: #B8A8A8;
+  font-size: 26rpx;
+}
+
+.resultCount {
+  padding: 12rpx 24rpx;
+}
+
+.countText {
+  font-size: 24rpx;
+  color: #B8A8A8;
+}
+
+.listWrap {
+  padding: 0 24rpx;
+}

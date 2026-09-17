@@ -1,0 +1,26 @@
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 40rpx;
+  padding: 16rpx 24rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #E8E0D5;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+}
+
+.block {
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 6rpx 6rpx 4rpx 4rpx;
+  border: 2rpx solid;
+}
+
+.label {
+  font-size: 22rpx;
+  color: #8C7C7C;
+}

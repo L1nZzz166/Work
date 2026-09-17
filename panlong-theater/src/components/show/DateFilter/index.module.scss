@@ -1,0 +1,40 @@
+.dates {
+  white-space: nowrap;
+  padding: 16rpx 24rpx;
+}
+
+.date {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16rpx 20rpx;
+  margin-right: 8rpx;
+  border-radius: 12rpx;
+  background: #fff;
+  min-width: 96rpx;
+  transition: all 0.3s;
+
+  &.active {
+    background: #1A0A0A;
+
+    .label {
+      color: #C9A96E;
+    }
+
+    .weekday {
+      color: #C9A96E;
+    }
+  }
+}
+
+.label {
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #1A0A0A;
+  margin-bottom: 4rpx;
+}
+
+.weekday {
+  font-size: 20rpx;
+  color: #8C7C7C;
+}

@@ -1,0 +1,138 @@
+.card {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 12rpx rgba(26,10,10,0.04);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.poster {
+  width: 100rpx;
+  height: 130rpx;
+  border-radius: 10rpx;
+  background: linear-gradient(135deg, #1A0A0A, #4A2020);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 20rpx;
+}
+
+.initial {
+  color: #C9A96E;
+  font-size: 40rpx;
+  font-weight: bold;
+  font-family: 'STSong', serif;
+}
+
+.info {
+  flex: 1;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #1A0A0A;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 4rpx;
+}
+
+.meta {
+  font-size: 24rpx;
+  color: #8C7C7C;
+  display: block;
+  margin-bottom: 2rpx;
+}
+
+.tickets {
+  font-size: 24rpx;
+  color: #8B1A2B;
+  font-weight: 500;
+}
+
+.status {
+  flex-shrink: 0;
+  margin-left: 12rpx;
+}
+
+.statusText {
+  font-size: 26rpx;
+  font-weight: 600;
+}
+
+.seats {
+  display: flex;
+  gap: 8rpx;
+  margin-top: 16rpx;
+  padding: 12rpx;
+  background: #F5F0EB;
+  border-radius: 8rpx;
+  flex-wrap: wrap;
+}
+
+.seat {
+  font-size: 24rpx;
+  color: #1A0A0A;
+  background: #fff;
+  padding: 6rpx 12rpx;
+  border-radius: 6rpx;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16rpx;
+  padding-top: 16rpx;
+  border-top: 1rpx solid #E8E0D5;
+}
+
+.orderId {
+  font-size: 22rpx;
+  color: #B8A8A8;
+}
+
+.amount {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #8B1A2B;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16rpx;
+  margin-top: 16rpx;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #8B1A2B, #6B1320);
+  padding: 14rpx 32rpx;
+  border-radius: 32rpx;
+}
+
+.btnPrimaryText {
+  color: #fff;
+  font-size: 26rpx;
+  font-weight: 500;
+}
+
+.btnGhost {
+  padding: 14rpx 32rpx;
+  border-radius: 32rpx;
+  border: 2rpx solid #E8E0D5;
+}
+
+.btnGhostText {
+  color: #8C7C7C;
+  font-size: 26rpx;
+}

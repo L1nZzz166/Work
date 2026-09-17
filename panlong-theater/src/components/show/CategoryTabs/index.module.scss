@@ -1,0 +1,33 @@
+.tabs {
+  white-space: nowrap;
+  padding: 0 24rpx;
+}
+
+.tab {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16rpx 24rpx;
+  margin-right: 8rpx;
+  border-radius: 16rpx;
+  transition: all 0.3s;
+
+  &.active {
+    background: #8B1A2B;
+
+    .name {
+      color: #fff;
+    }
+  }
+}
+
+.icon {
+  font-size: 36rpx;
+  margin-bottom: 4rpx;
+}
+
+.name {
+  font-size: 22rpx;
+  color: #1A0A0A;
+  font-weight: 500;
+}

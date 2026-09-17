@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 24rpx 48rpx 32rpx;
+  background: #fff;
+}
+
+.curve {
+  width: 70%;
+  height: 60rpx;
+  border-bottom: 4rpx solid #C9A96E;
+  border-left: 4rpx solid transparent;
+  border-right: 4rpx solid transparent;
+  border-radius: 0 0 50% 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8rpx;
+}
+
+.label {
+  font-size: 22rpx;
+  color: #8C7C7C;
+  letter-spacing: 12rpx;
+}

@@ -1,0 +1,44 @@
+.navBar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88rpx;
+  padding: 0 24rpx;
+  position: relative;
+}
+
+.title {
+  color: #FFFFFF;
+  font-size: 34rpx;
+  font-weight: 600;
+  font-family: 'STSong', 'Songti SC', 'Noto Serif CJK SC', serif;
+  letter-spacing: 4rpx;
+}
+
+.backBtn {
+  position: absolute;
+  left: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.backIcon {
+  color: #FFFFFF;
+  font-size: 48rpx;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.placeholder {
+  width: 64rpx;
+}

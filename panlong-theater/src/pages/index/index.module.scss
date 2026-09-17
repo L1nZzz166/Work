@@ -1,0 +1,132 @@
+@use '../../assets/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  margin: 16rpx 24rpx;
+  padding: 18rpx 24rpx;
+  background: #fff;
+  border-radius: 48rpx;
+  box-shadow: 0 2rpx 8rpx rgba(26,10,10,0.03);
+}
+
+.searchIcon {
+  font-size: 28rpx;
+  margin-right: 12rpx;
+}
+
+.searchPlaceholder {
+  color: #B8A8A8;
+  font-size: 26rpx;
+}
+
+.bannerWrap {
+  margin: 0 24rpx 24rpx;
+}
+
+.swiper {
+  height: 320rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.swiperItem {
+  height: 100%;
+}
+
+.bannerCard {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1A0A0A 0%, #4A2020 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 32rpx;
+  border-radius: 20rpx;
+}
+
+.bannerContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.bannerTitle {
+  color: #C9A96E;
+  font-size: 40rpx;
+  font-weight: 700;
+  font-family: $font-heading;
+  margin-bottom: 8rpx;
+}
+
+.bannerSubtitle {
+  color: rgba(255,255,255,0.8);
+  font-size: 24rpx;
+}
+
+// 通用区块
+.section {
+  margin: 0 24rpx 32rpx;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.sectionTitle {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: $color-text;
+  font-family: $font-heading;
+}
+
+.sectionMore {
+  font-size: 26rpx;
+  color: $color-primary;
+}
+
+// 横向滚动演出列表
+.hShowList {
+  white-space: nowrap;
+  padding: 8rpx 0;
+}
+
+// 网格演出列表
+.gShowList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.gShowItem {
+  width: calc(50% - 8rpx);
+}
+
+// 剧院信息卡片
+.theaterCard {
+  background: linear-gradient(135deg, #1A0A0A, #3D1515);
+  border-radius: 20rpx;
+  padding: 32rpx;
+}
+
+.theaterTitle {
+  color: #C9A96E;
+  font-size: 32rpx;
+  font-weight: 600;
+  font-family: $font-heading;
+  display: block;
+  margin-bottom: 16rpx;
+}
+
+.theaterInfo {
+  color: rgba(255,255,255,0.7);
+  font-size: 24rpx;
+  display: block;
+  margin-bottom: 8rpx;
+}

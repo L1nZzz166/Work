@@ -1,0 +1,261 @@
+.page {
+  min-height: 100vh;
+  background: #F5F0EB;
+}
+
+.posterSection {
+  position: relative;
+  height: 560rpx;
+}
+
+.poster {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #1A0A0A 0%, #3D1515 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.posterInitial {
+  color: #C9A96E;
+  font-size: 140rpx;
+  font-weight: bold;
+  font-family: 'STSong', serif;
+  opacity: 0.3;
+}
+
+.posterOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 48rpx 32rpx 32rpx;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+}
+
+.posterTitle {
+  color: #fff;
+  font-size: 44rpx;
+  font-weight: 700;
+  font-family: 'STSong', serif;
+  display: block;
+}
+
+.posterSubtitle {
+  color: rgba(255,255,255,0.7);
+  font-size: 26rpx;
+  display: block;
+  margin-top: 4rpx;
+  margin-bottom: 12rpx;
+}
+
+.posterMeta {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  flex-wrap: wrap;
+}
+
+.posterRating {
+  color: #C9A96E;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.posterCount, .posterCat, .posterDuration {
+  color: rgba(255,255,255,0.6);
+  font-size: 24rpx;
+}
+
+.posterLang {
+  color: rgba(255,255,255,0.5);
+  font-size: 24rpx;
+  margin-top: 4rpx;
+  display: block;
+}
+
+// 通用区块
+.section {
+  margin: 24rpx 24rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+}
+
+.sectionTitle {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1A0A0A;
+  font-family: 'STSong', serif;
+  display: block;
+  margin-bottom: 16rpx;
+  border-left: 6rpx solid #8B1A2B;
+  padding-left: 16rpx;
+}
+
+.venueCard {
+  background: #F5F0EB;
+  border-radius: 12rpx;
+  padding: 20rpx;
+}
+
+.venueName {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #1A0A0A;
+  display: block;
+  margin-bottom: 12rpx;
+}
+
+.venueDates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rpx;
+}
+
+.venueDate {
+  font-size: 24rpx;
+  color: #8B1A2B;
+  background: #fff;
+  padding: 8rpx 14rpx;
+  border-radius: 8rpx;
+}
+
+.venueMore {
+  font-size: 24rpx;
+  color: #8C7C7C;
+  padding: 8rpx;
+}
+
+// 演员阵容
+.castList {
+  white-space: nowrap;
+  padding: 8rpx 0;
+}
+
+.castItem {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 140rpx;
+  margin-right: 16rpx;
+}
+
+.castAvatar {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8B1A2B, #C9A96E);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8rpx;
+}
+
+.castInitial {
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.castName {
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #1A0A0A;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.castRole {
+  font-size: 20rpx;
+  color: #8C7C7C;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.description {
+  font-size: 28rpx;
+  color: #4A4A4A;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.noticeCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.noticeItem {
+  font-size: 26rpx;
+  color: #8C7C7C;
+  line-height: 1.6;
+}
+
+.tags {
+  display: flex;
+  gap: 12rpx;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 22rpx;
+  color: #8B1A2B;
+  background: #FDF2F4;
+  padding: 8rpx 16rpx;
+  border-radius: 8rpx;
+}
+
+// 底部固定购票栏
+.bottomBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 24rpx;
+  padding-bottom: calc(20rpx + constant(safe-area-inset-bottom));
+  padding-bottom: calc(20rpx + env(safe-area-inset-bottom));
+  background: #fff;
+  border-top: 1rpx solid #E8E0D5;
+  z-index: 10;
+}
+
+.priceInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.priceLabel {
+  font-size: 22rpx;
+  color: #B8A8A8;
+}
+
+.price {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #8B1A2B;
+}
+
+.buyBtn {
+  background: linear-gradient(135deg, #8B1A2B, #6B1320);
+  padding: 22rpx 56rpx;
+  border-radius: 40rpx;
+}
+
+.buyBtnDisabled {
+  opacity: 0.5;
+}
+
+.buyBtnText {
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+}
