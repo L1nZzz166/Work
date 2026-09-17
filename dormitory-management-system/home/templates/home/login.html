@@ -1,0 +1,61 @@
+{% extends 'base_login.html' %}
+{% load static %}
+
+{% block title %}登录 - 学生宿舍管理系统{% endblock %}
+
+{% block body_class %}login-page{% endblock %}
+
+{% block content %}
+<div class="login-wrapper">
+    <div class="login-card">
+        <div class="login-header">
+            <i class="bi bi-building" style="font-size: 3rem;"></i>
+            <h2>学生宿舍管理系统</h2>
+            <p class="text-muted">请登录您的账号</p>
+        </div>
+
+        {% if error_msg %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-triangle"></i> {{ error_msg }}
+            <button type="button" class="close" data-dismiss="alert">
+                <span>&times;</span>
+            </button>
+        </div>
+        {% endif %}
+
+        <form method="post" action="{% url 'home:login' %}">
+            {% csrf_token %}
+            {% if request.GET.next %}
+            <input type="hidden" name="next" value="{{ request.GET.next }}">
+            {% endif %}
+            <div class="form-group">
+                <label for="username">
+                    <i class="bi bi-person"></i> 账号
+                </label>
+                <input type="text" name="username" id="username"
+                       class="form-control form-control-lg"
+                       placeholder="请输入账号"
+                       value="{{ username|default:'' }}"
+                       required autofocus>
+            </div>
+            <div class="form-group">
+                <label for="password">
+                    <i class="bi bi-lock"></i> 密码
+                </label>
+                <input type="password" name="password" id="password"
+                       class="form-control form-control-lg"
+                       placeholder="请输入密码"
+                       required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block mt-4">
+                <i class="bi bi-box-arrow-in-right"></i> 登 录
+            </button>
+
+            <hr class="mt-4 mb-3">
+            <a href="{% url 'home:guest_login' %}" class="btn btn-outline-secondary btn-lg btn-block">
+                <i class="bi bi-eye"></i> 游客登录（仅查看）
+            </a>
+        </form>
+    </div>
+</div>
+{% endblock %}

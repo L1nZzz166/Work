@@ -1,0 +1,7 @@
+Django==2.2.0
+pytz
+sqlparse
+gunicorn
+setuptools
+wheel
+pip

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}学生宿舍管理系统{% endblock %}</title>
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home:index' %}">
+                <i class="bi bi-building"></i> 学生宿舍管理系统
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.resolver_match.app_name == 'home' %}active{% endif %}"
+                           href="{% url 'home:index' %}">
+                            <i class="bi bi-house-door"></i> 首页
+                        </a>
+                    </li>
+                    <li class="nav-item ml-3">
+                        <span class="navbar-text text-white-50">
+                            <i class="bi bi-person-check"></i> {{ user.username }}
+                            {% if user.username == 'guest' %}
+                            <span class="badge badge-warning ml-1">游客模式</span>
+                            {% endif %}
+                        </span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home:logout' %}"
+                           onclick="return confirm('确定要退出登录吗？')">
+                            <i class="bi bi-box-arrow-right"></i> 退出
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <div class="main-content">
+        <div class="container">
+            {% if messages %}
+            <div class="messages-container mt-2">
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+    <!-- 页脚 - 个人信息 -->
+    <footer class="footer">
+        <div class="container">
+            <p>© {% now "Y" %} 学生宿舍管理系统 | 版权所有</p>
+            <p class="personal-info">
+                <span><i class="bi bi-person-circle"></i> 姓名：林志杰</span>
+                <span><i class="bi bi-mortarboard"></i> 学号：29</span>
+                <span><i class="bi bi-envelope"></i> Django2.2 + Python3.7</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 4 JS -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

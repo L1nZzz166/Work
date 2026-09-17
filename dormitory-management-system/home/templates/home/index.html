@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}首页 - 学生宿舍管理系统{% endblock %}
+
+{% block content %}
+<!-- 欢迎区域 -->
+<div class="hero-section">
+    <h1><i class="bi bi-building"></i> 学生宿舍管理系统</h1>
+    <p>高效、便捷的宿舍管理解决方案，让宿舍管理更轻松</p>
+</div>
+
+<!-- 功能入口卡片 -->
+<div class="row">
+    <div class="col-md-4 mb-4">
+        <a href="{% url 'student:list' %}" class="feature-card">
+            <span class="feature-icon">👨‍🎓</span>
+            <h3>学生管理</h3>
+            <p>管理学生基本信息，包括入住登记、信息修改、宿舍分配等功能</p>
+        </a>
+    </div>
+    <div class="col-md-4 mb-4">
+        <a href="{% url 'dormitory:list' %}" class="feature-card">
+            <span class="feature-icon">🏠</span>
+            <h3>宿舍管理</h3>
+            <p>管理宿舍楼栋与房间信息，查看入住情况，合理分配宿舍资源</p>
+        </a>
+    </div>
+    <div class="col-md-4 mb-4">
+        <a href="{% url 'repair:list' %}" class="feature-card">
+            <span class="feature-icon">🔧</span>
+            <h3>报修管理</h3>
+            <p>在线提交宿舍设施报修申请，实时跟踪维修进度，方便快捷</p>
+        </a>
+    </div>
+</div>
+
+<!-- 系统介绍 -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="table-container">
+            <h4 class="page-title">系统简介</h4>
+            <p>本系统是一个功能完善的学生宿舍管理平台，旨在为学校后勤管理部门提供一站式宿舍管理服务。</p>
+            <p><strong>主要功能模块：</strong></p>
+            <ul>
+                <li><strong>学生管理：</strong>录入和查询学生信息，实现学生入住、退宿、宿舍调换等操作。</li>
+                <li><strong>宿舍管理：</strong>管理宿舍楼栋、房间信息，实时查看各宿舍的入住情况和空余床位。</li>
+                <li><strong>报修管理：</strong>学生可在线提交宿舍设施报修申请，管理人员可跟踪处理进度。</li>
+            </ul>
+            <p><strong>技术栈：</strong>Python 3.7.8 + Django 2.2.0 + Bootstrap 4 + SQLite</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

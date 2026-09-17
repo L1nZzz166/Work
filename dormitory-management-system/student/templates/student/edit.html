@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}编辑学生 - 学生宿舍管理系统{% endblock %}
+
+{% block content %}
+<div class="sub-app-toolbar mb-3">
+    <a href="javascript:history.back()" class="btn btn-outline-secondary btn-sm">
+        <i class="bi bi-arrow-left"></i> 返回上一级
+    </a>
+    <a href="{% url 'home:index' %}" class="btn btn-outline-primary btn-sm ml-2">
+        <i class="bi bi-house-door"></i> 回到首页
+    </a>
+</div>
+<h3 class="page-title"><i class="bi bi-pencil-square"></i> 编辑学生信息 - {{ student.name }}</h3>
+
+<div class="form-card">
+    <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+            {% if field.errors %}
+            <small class="text-danger">{{ field.errors.0 }}</small>
+            {% endif %}
+        </div>
+        {% endfor %}
+        <div class="mt-4">
+            <button type="submit" class="btn btn-primary">
+                <i class="bi bi-check-circle"></i> 更新
+            </button>
+            <a href="{% url 'student:list' %}" class="btn btn-secondary ml-2">
+                <i class="bi bi-arrow-left"></i> 返回列表
+            </a>
+        </div>
+    </form>
+</div>
+{% endblock %}

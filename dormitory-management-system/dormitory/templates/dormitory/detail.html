@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block title %}宿舍详情 - 学生宿舍管理系统{% endblock %}
+
+{% block content %}
+<div class="sub-app-toolbar mb-3">
+    <a href="javascript:history.back()" class="btn btn-outline-secondary btn-sm">
+        <i class="bi bi-arrow-left"></i> 返回上一级
+    </a>
+    <a href="{% url 'home:index' %}" class="btn btn-outline-primary btn-sm ml-2">
+        <i class="bi bi-house-door"></i> 回到首页
+    </a>
+</div>
+<div class="d-flex align-items-center mb-4">
+    <a href="{% url 'dormitory:list' %}" class="back-link mr-3">
+        <i class="bi bi-arrow-left"></i> 返回列表
+    </a>
+    <h3 class="page-title mb-0"><i class="bi bi-info-circle"></i> 宿舍详情</h3>
+</div>
+
+<div class="row">
+    <!-- 宿舍基本信息 -->
+    <div class="col-md-5">
+        <div class="detail-card">
+            <h5 class="mb-3"><i class="bi bi-house"></i> 基本信息</h5>
+            <dl class="row">
+                <dt class="col-sm-4">楼栋</dt>
+                <dd class="col-sm-8">{{ dormitory.get_building_display }}</dd>
+
+                <dt class="col-sm-4">房间号</dt>
+                <dd class="col-sm-8">{{ dormitory.room_number }}</dd>
+
+                <dt class="col-sm-4">楼层</dt>
+                <dd class="col-sm-8">{{ dormitory.floor }}层</dd>
+
+                <dt class="col-sm-4">房型</dt>
+                <dd class="col-sm-8">{{ dormitory.room_type }}</dd>
+
+                <dt class="col-sm-4">总容量</dt>
+                <dd class="col-sm-8">{{ dormitory.capacity }}人</dd>
+
+                <dt class="col-sm-4">已入住</dt>
+                <dd class="col-sm-8">{{ dormitory.current_count }}人</dd>
+
+                <dt class="col-sm-4">空余床位</dt>
+                <dd class="col-sm-8">
+                    {% if dormitory.available_beds > 0 %}
+                    <span class="text-success font-weight-bold">{{ dormitory.available_beds }}个</span>
+                    {% else %}
+                    <span class="text-danger font-weight-bold">已满</span>
+                    {% endif %}
+                </dd>
+
+                {% if dormitory.description %}
+                <dt class="col-sm-4">描述</dt>
+                <dd class="col-sm-8">{{ dormitory.description }}</dd>
+                {% endif %}
+            </dl>
+        </div>
+    </div>
+
+    <!-- 入住学生列表 -->
+    <div class="col-md-7">
+        <div class="table-container">
+            <h5 class="mb-3"><i class="bi bi-people"></i> 入住学生 ({{ students|length }}/{{ dormitory.capacity }})</h5>
+            {% if students %}
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>学号</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>联系电话</th>
+                        <th>入住日期</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td>{{ student.student_id }}</td>
+                        <td><strong>{{ student.name }}</strong></td>
+                        <td>{{ student.gender }}</td>
+                        <td>{{ student.phone }}</td>
+                        <td>{{ student.check_in_date|date:"Y-m-d" }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <div class="text-center py-3">
+                <p class="text-muted">该宿舍暂无入住学生</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
