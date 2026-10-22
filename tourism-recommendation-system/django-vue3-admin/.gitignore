@@ -1,0 +1,19 @@
+/backend/venv
+/backend/.idea
+.idea
+
+.history/
+.vscode/
+web/package-lock.json
+
+.playwright-mcp/
+/backend/db.sqlite3-wal
+/backend/db.sqlite3-shm
+web/test-results/
+
+# Superpowers planning docs
+docs/superpowers/
+
+# Local configuration files (not tracked in git)
+/backend/application/settings.py
+/backend/conf/env.py
